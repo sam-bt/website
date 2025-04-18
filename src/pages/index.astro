@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+// This will be your featured project
+const featuredProject = {
+  title: "Global Identity Verification",
+  description: "A full-stack task management application built with React, Node.js, and MongoDB. Features include task creation, categorization, drag-and-drop organization, and user authentication.",
+  image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+  imageAlt: "Screenshot of task management application",
+  seeMoreUrl: "https://github.com/yourusername/task-manager",
+  tags: ["Swift", "AWS", "Amplify", "SwiftUI", "Fastlane", "Xcode"],
+  featured: true
+};
+---
+
+<Layout title="Samuel Beattie">
+  <Hero />
+  
+  <div class="container mx-auto px-4 pb-16 animate-fade-in animate-delay-300">
+    <ProjectCard {...featuredProject} />
+  </div>
+</Layout>
+
+<style>
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+</style>

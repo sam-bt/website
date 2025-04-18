@@ -1,0 +1,115 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+// Sample projects data - replace with your own
+const projects = [
+  {
+    title: "Smart Task Manager",
+    description: "A full-stack task management application built with React, Node.js, and MongoDB. Features include task creation, categorization, drag-and-drop organization, and user authentication.",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+    imageAlt: "Screenshot of task management application",
+    githubUrl: "https://github.com/yourusername/task-manager",
+    seeMoreUrl: "",
+    tags: ["React", "Node.js", "MongoDB", "Express"]
+  },
+  {
+    title: "Weather App",
+    description: "A weather application that provides real-time weather information for any location. Built with React and integrates with the OpenWeatherMap API.",
+    image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+    imageAlt: "Screenshot of weather application",
+    githubUrl: "https://github.com/yourusername/weather-app",
+    seeMoreUrl: "",
+    tags: ["React", "API Integration", "CSS"]
+  },
+  {
+    title: "E-commerce Platform",
+    description: "A fully functional e-commerce platform with product listings, shopping cart, and checkout functionality. Integrated with Stripe for payment processing.",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+    imageAlt: "Screenshot of e-commerce platform",
+    seeMoreUrl: "",
+    tags: ["Next.js", "Tailwind CSS", "Stripe", "Node.js"]
+  },
+  {
+    title: "Fitness Tracker",
+    description: "A mobile-first web application for tracking workouts and fitness progress. Features include workout logging, progress visualization, and goal setting.",
+    image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+    imageAlt: "Screenshot of fitness tracker application",
+    githubUrl: "https://github.com/yourusername/fitness-tracker",
+    seeMoreUrl: "",
+    tags: ["React Native", "Firebase", "Chart.js"]
+  },
+  {
+    title: "Portfolio Website",
+    description: "A personal portfolio website built with Astro and Tailwind CSS. Features a responsive design, dark mode, and project showcase.",
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+    imageAlt: "Screenshot of portfolio website",
+    githubUrl: "https://github.com/yourusername/portfolio",
+    seeMoreUrl: "",
+    tags: ["Astro", "Tailwind CSS", "Responsive Design"]
+  },
+  {
+    title: "Chat Application",
+    description: "A real-time chat application built with Socket.io, Express, and React. Features include user authentication, private messaging, and group chats.",
+    image: "https://images.unsplash.com/photo-1611746872915-64382b5c091e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+    imageAlt: "Screenshot of chat application",
+    githubUrl: "https://github.com/yourusername/chat-app",
+    tags: ["React", "Socket.io", "Express", "MongoDB"]
+  }
+];
+---
+
+<Layout
+  title="Projects | YourName"
+  description="Explore YourName's software development projects including web applications, mobile apps, and more."
+>
+  <section class="py-16 md:py-24 animate-fade-in">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-neutral-900 dark:text-white">
+          My Projects
+        </h1>
+        <p class="text-xl text-neutral-700 dark:text-neutral-300 max-w-2xl mx-auto">
+          Here's a collection of projects I've worked on. Each one represents different skills and technologies I've learned throughout my journey.
+        </p>
+      </div>
+      
+      <!-- Project Filters (optional) -->
+      <!-- <div class="max-w-4xl mx-auto mb-12 flex justify-center flex-wrap gap-2">
+        <button class="px-4 py-2 rounded-lg bg-primary-600 text-white font-medium">All</button>
+        <button class="px-4 py-2 rounded-lg bg-neutral-200 dark:bg-neutral-700 text-neutral-900 dark:text-white font-medium">Web</button>
+        <button class="px-4 py-2 rounded-lg bg-neutral-200 dark:bg-neutral-700 text-neutral-900 dark:text-white font-medium">Mobile</button>
+        <button class="px-4 py-2 rounded-lg bg-neutral-200 dark:bg-neutral-700 text-neutral-900 dark:text-white font-medium">Backend</button>
+      </div> -->
+      
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 animate-slide-up">
+        {projects.map(project => (
+          <ProjectCard {...project} />
+        ))}
+      </div>
+      
+      <!-- Call to Action -->
+      <div class="max-w-4xl mx-auto text-center mt-16">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-neutral-900 dark:text-white">
+          Interested in Collaborating?
+        </h2>
+        <p class="text-neutral-700 dark:text-neutral-300 mb-6 max-w-2xl mx-auto">
+          I'm always open to new projects and opportunities. If you have an idea or project you'd like to discuss, feel free to reach out!
+        </p>
+        <a 
+          href="mailto:your.email@example.com" 
+          class="px-6 py-3 rounded-lg bg-primary-600 hover:bg-primary-700 text-white font-medium transition-colors"
+        >
+          Get In Touch
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .animate-slide-up {
+    animation-delay: 300ms;
+  }
+</style>

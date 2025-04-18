@@ -1,0 +1,67 @@
+---
+import "@fontsource-variable/inter";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Personal portfolio website of a software engineering student" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white min-h-screen flex flex-col">
+    <Header />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      // Check for dark mode preference
+      const isDarkMode = localStorage.getItem('darkMode') === 'true' || 
+        (localStorage.getItem('darkMode') === null && 
+         window.matchMedia('(prefers-color-scheme: dark)').matches);
+      
+      if (isDarkMode) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter Variable', sans-serif;
+    line-height: 1.5;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+  }
+  
+  /* Transition for dark mode */
+  html.dark {
+    color-scheme: dark;
+  }
+  
+  body, html {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+</style>
