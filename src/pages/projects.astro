@@ -2,25 +2,26 @@
 import Layout from '../layouts/Layout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 
-// Sample projects data - replace with your own
 const projects = [
   {
-    title: "Smart Task Manager",
-    description: "A full-stack task management application built with React, Node.js, and MongoDB. Features include task creation, categorization, drag-and-drop organization, and user authentication.",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
-    imageAlt: "Screenshot of task management application",
-    githubUrl: "https://github.com/yourusername/task-manager",
-    seeMoreUrl: "",
-    tags: ["React", "Node.js", "MongoDB", "Express"]
+  title: "Global Identity Verification",
+  description: "An iOS companion application that allows users to scan or upload data to the Raytio web client. I developed this app from scratch during my summer internship at Raytio and it is now available on the app store for anyone to use.",
+  image: "/passport-scan.jpeg",
+  imageAlt: "Screenshot of task management application",
+  appStoreUrl: "https://apps.apple.com/us/app/global-idv/id6738364485",
+  viewDetails: true,
+  tags: ["Swift", "AWS", "Amplify", "SwiftUI", "Fastlane", "Xcode"],
+  slug: "global-idv",
   },
   {
-    title: "Weather App",
-    description: "A weather application that provides real-time weather information for any location. Built with React and integrates with the OpenWeatherMap API.",
-    image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
-    imageAlt: "Screenshot of weather application",
-    githubUrl: "https://github.com/yourusername/weather-app",
-    seeMoreUrl: "",
-    tags: ["React", "API Integration", "CSS"]
+    title: "Wine Management App",
+    description: "WINO is an intuitive kiosk application designed for wine enthusiasts, casual drinkers, and tourists alike. With a user-friendly interface, WINO provides a comprehensive platform for all things wine, making it easy to explore and engage with the world of viticulture. This Application was produced for the Seng202 Course at the University of Canterbury",
+    image: "/wino-thumbnail.png",
+    imageAlt: "Wino Wine Page",
+    githubUrl: "https://github.com/sam-bt/Seng202-Wine-Management-App",
+    viewDetails: true,
+    tags: ["Java", "JavaFX", "OpenStreetMap", "JUnit", "Gradle"],
+    slug: "wino",
   },
   {
     title: "E-commerce Platform",
@@ -29,6 +30,7 @@ const projects = [
     imageAlt: "Screenshot of e-commerce platform",
     seeMoreUrl: "",
     tags: ["Next.js", "Tailwind CSS", "Stripe", "Node.js"]
+    
   },
   {
     title: "Fitness Tracker",
