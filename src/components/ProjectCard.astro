@@ -29,12 +29,12 @@ const {
 ---
 
 <article class:list={[
-  "bg-white dark:bg-neutral-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300",
+  "bg-white dark:bg-neutral-800 rounded-xl border border-neutral-200 dark:border-neutral-700 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300",
   { "lg:flex": featured }
 ]}>
   <div class:list={[
     "relative overflow-hidden",
-    { "lg:w-1/2": featured }
+    { "lg:w-1/2": featured },
   ]}>
     <img 
       src={image} 
@@ -105,7 +105,7 @@ const {
             <polyline points="15 3 21 3 21 9"></polyline>
             <line x1="10" y1="14" x2="21" y2="3"></line>
           </svg>
-          See More
+          Go to Project
         </a>
       )}
 

@@ -16,6 +16,32 @@ export interface Project {
   }
   
   export const projects: Record<string, Project> = {
+    'reno-reels': {
+      title: "Reno Reels",
+      description: "An application developed as part of the full year Seng302 group course",
+      fullDescription: 
+      `
+      This web app was developed as part of the full year Seng302 course at the University of Canterbury. 
+      
+      RenoReel is a task management and documentation tool designed specifically for home renovation projects. It provides a structured platform for homeowners, contractors, and DIY enthusiasts to plan, track, and share their renovation journeys in a visually engaging way.
+      
+      In today's interconnected world, sharing life's transformations has become second nature.  However, home renovations deserve more than a simple before and after photo. RenoReel creates a dedicated space where homeowners, DIY enthusiasts, and renovation professionals can document their projects from conception to completion, breaking down complex transformations into manageable tasks and shareable moments.
+      
+      `,
+      image: "/renoreel-renovation.png",
+      imageAlt: "Screenshot of reno reels application",
+      seeMoreUrl: "https://renoreel.lukeh.nz/",
+      tags: ["Java", "JavaScript", "SpringBoot", "CI/CD", "HTML", "CSS", "Gradle", "JUnit"],
+      challenges: [
+        "Applying scrum and agile methodologies in a real project",
+        "Weekly SMART goal-setting and reflection on individual performance and contributions to the team",
+        "Navigating a 6-person self-managed team",
+        "Applying feedback from teaching team and peers",
+        "Following real software development lifecycle and best practices",
+        "Learning how use various frameworks together to develop a continuously-integrated full-stack application", 
+      ],
+      learnings: [ /* … */ ],
+    },
     'global-idv': {
       title: "Global Identity Verification iOS App",
       description: "An iOS companion application that allows users to utilize phone-specific hardware/software to scan or upload data to the Raytio web client. I developed this app from scratch during my summer internship at Raytio and it is now available on the app store for anyone to use.",

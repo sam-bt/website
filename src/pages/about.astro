@@ -1,21 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// Skills data
 const skills = [
-  { category: "Languages", items: ["Swift", "Python", "Java", "SQL", "TypeScript", "HTML", "C", "JSON"] },
-  { category: "Frameworks", items: ["Astro", "SpringBoot", "Docusaurus"] },
-  { category: "Tools", items: ["Git", "Docker", "AWS", "VS Code", "Intellij", "Webstorm", "Xcode", "PostMan"] },
-  { category: "Other", items: ["Scrum", "UI/UX Design", "RESTful APIs", "Kanban"] }
+  { category: "Languages", items: ["Swift", "Python", "Java", "SQL", "TypeScript", "HTML", "C", "JSON", "YANG"] },
+  { category: "Skills", items: ["AI", "Scrum", "Ansible", "Networking", "Requirements Elicitation", "NETCONF/RESTCONF", "UI/UX Design", "RESTful APIs", "Kanban"] },
+  { category: "Tools", items: ["Git", "Jira", "Docker", "AWS", "VS Code", "Intellij", "Webstorm", "Xcode", "PostMan"] },
+  { category: "Frameworks", items: ["Cucumber", "SpringBoot", "Astro", "Docusaurus"] },
 ];
 
-// Education data
 const education = [
   {
     degree: "Bachelor of Software Engineering with Honours",
     institution: "University of Canterbury",
     period: "2023 - Present",
-    description: "Currently in my third year taking courses on Big Data, Web Computing, Scrum-based group Project and Software Engineering foundations."
+    description: "Currently in my fourth year currently completing my Honours project and taking courses in Machine Learning, Software Requirements and Architecture and Advanced Software Engineering."
   },
   {
     degree: "High School",
@@ -25,10 +23,15 @@ const education = [
   }
 ];
 
-// Experience data
 const experiences = [
   {
-    position: "Software Developer Intern",
+    position: "Software Engineering Intern",
+    company: "Allied Telesis Labs",
+    period: "Summer 2025/2026",
+    description: "During this internships I worked on Testing and Development of NETCONF, RESTONF and Ansible protocols for Allied Telesis network devices. I then developed an interface that used these protocols to "
+  },
+  {
+    position: "Software Engineering Intern",
     company: "Raytio",
     period: "Summer 2024/2025",
     description: "During this internship I developed a companion iOS application for the Raytio web client called Global-IDV. I also worked on creating a usage and subscription billing system for Raytio, helping to prepare them for launch. I have worked for Raytio in the holidays and spare time since July 2023. Over the 24/25 summer I completed a 400+ hour internship here."
@@ -104,7 +107,7 @@ const experiences = [
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skills.map(skillGroup => (
-            <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm">
+            <div class="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-xl p-6 shadow-sm">
               <h3 class="text-xl font-semibold mb-4 text-neutral-900 dark:text-white">
                 {skillGroup.category}
               </h3>
@@ -132,7 +135,7 @@ const experiences = [
         </h2>
         
         {education.map(edu => (
-          <div class="mb-8 bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm">
+          <div class="mb-8 bg-white dark:bg-neutral-800 rounded-xl border border-neutral-200 dark:border-neutral-700 p-6 shadow-sm">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
               <h3 class="text-xl font-semibold text-neutral-900 dark:text-white">
                 {edu.degree}
@@ -166,7 +169,7 @@ const experiences = [
           </h2>
           
           {experiences.map(exp => (
-            <div class="mb-8 bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm">
+            <div class="mb-8 bg-white dark:bg-neutral-800 rounded-xl border border-neutral-200 dark:border-neutral-700 p-6 shadow-sm">
               <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                 <h3 class="text-xl font-semibold text-neutral-900 dark:text-white">
                   {exp.position}
