@@ -23,7 +23,43 @@ const featuredProject = {
   <div class="container mx-auto px-4 pb-16 animate-fade-in animate-delay-300">
     <ProjectCard {...featuredProject} />
   </div>
+
+  <!-- Contact Section -->
+  <section class="py-12 bg-neutral-50 dark:bg-neutral-800/50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-neutral-900 dark:text-white">
+          Let's Connect
+        </h2>
+        
+        <p class="text-neutral-700 dark:text-neutral-300 mb-8 max-w-2xl mx-auto">
+          I'm always open to new opportunities and collaborations. Feel free to reach out via email or connect with me on social media.
+        </p>
+        
+        <div class="flex justify-center space-x-4">
+          <a 
+            href="mailto:samuel.ry.beattie@gmail.com" 
+            class="px-6 py-3 rounded-lg bg-primary-600 hover:bg-primary-700 text-white font-medium transition-colors"
+          >
+            Email Me
+          </a>
+          
+          <a 
+            href="https://linkedin.com/in/sam-bt" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="px-6 py-3 rounded-lg bg-neutral-200 dark:bg-neutral-700 hover:bg-neutral-300 dark:hover:bg-neutral-600 text-neutral-900 dark:text-white font-medium transition-colors"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </Layout>
+
+
 
 <style>
   .animate-delay-300 {

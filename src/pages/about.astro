@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import myLocalImage from '/public/headshot.jpeg';
 
 const skills = [
   { category: "Languages", items: ["Swift", "Python", "Java", "SQL", "TypeScript", "HTML", "C", "JSON", "YANG"] },
-  { category: "Skills", items: ["AI", "Scrum", "Ansible", "Networking", "Requirements Elicitation", "NETCONF/RESTCONF", "UI/UX Design", "RESTful APIs", "Kanban"] },
-  { category: "Tools", items: ["Git", "Jira", "Docker", "AWS", "VS Code", "Intellij", "Webstorm", "Xcode", "PostMan"] },
+  { category: "Skills", items: ["AI", "Scrum", "Ansible", "Networking", "Requirements Elicitation", "NETCONF/RESTCONF", "UI/UX Design", "RESTful APIs", "Agile"] },
+  { category: "Tools", items: ["Git", "Jira", "Cursor", "Claude Code", "Docker", "AWS", "VS Code", "Intellij", "Webstorm", "Xcode", "PostMan"] },
   { category: "Frameworks", items: ["Cucumber", "SpringBoot", "Astro", "Docusaurus"] },
 ];
 
@@ -28,18 +30,24 @@ const experiences = [
     position: "Software Engineering Intern",
     company: "Allied Telesis Labs",
     period: "Summer 2025/2026",
-    description: "During this internships I worked on Testing and Development of NETCONF, RESTONF and Ansible protocols for Allied Telesis network devices. I then developed an interface that used these protocols to "
+    description: "During this internships I worked on Testing and Development of NETCONF, RESTONF and Ansible protocols for Allied Telesis network devices. I then developed an graphical interface and backend that used these protocols to allow for easy, remote setup, configuration and management of spine-leaf data center networks"
   },
   {
     position: "Software Engineering Intern",
     company: "Raytio",
-    period: "Summer 2024/2025",
-    description: "During this internship I developed a companion iOS application for the Raytio web client called Global-IDV. I also worked on creating a usage and subscription billing system for Raytio, helping to prepare them for launch. I have worked for Raytio in the holidays and spare time since July 2023. Over the 24/25 summer I completed a 400+ hour internship here."
+    period: "Summer 2024/2025 & Part Time July 2023 - Present",
+    description: "During this internship I developed a companion iOS application for the Raytio web client called Global-IDV. I also worked on creating a usage and subscription billing system for Raytio, helping to prepare them for launch. I have worked for Raytio in the holidays and spare time since July 2023. Over the 24/25 summer I completed a 400+ hour internship here and have completed 800+ hours here total over my tenure."
+  },
+  {
+    position: "Building Labourer",
+    company: "Self-Employed",
+    period: "Summer 2023/2024",
+    description: "During this time I completed various building labouring jobs for multiple people in the local community 2-4 days per week."
   },
   {
     position: "Food Service Worker",
     company: "McDonald's",
-    period: "Aug 2021 - Dec 2022",
+    period: "Aug 2021 - Feb 2023",
     description: "I worked at McDonald's during my time at high school for 16-20 hours per week, where I learned valuable skills in customer service, teamwork, and time management."
   },
   {
@@ -65,10 +73,9 @@ const experiences = [
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="md:col-span-1">
             <div class="sticky top-24">
-              <img 
-                src="/headshot.jpeg"
-                alt="Samuel Beattie" 
-                class="w-full aspect-square object-cover rounded-xl mb-4 shadow-md"
+              <Image src={myLocalImage} 
+              alt="Samuel Beattie"
+              class="w-full aspect-square object-cover rounded-xl mb-4 shadow-md"
               />
             </div>
           </div>
@@ -76,19 +83,19 @@ const experiences = [
           <div class="md:col-span-2">
             <div class="prose prose-lg dark:prose-invert">
               <p>
-                Hello! I'm a passionate third-year software engineering student with a love for creating innovative, user-friendly applications.
+                Hello! I'm a passionate final-year software engineering student looking to make a positive impact in the tech industry. 
               </p>
               
               <p>
-                When I'm not coding, you can find me outdoors, spending time with friends and family, or learning about something new. I'm always looking for new challenges and opportunities to grow as a developer and as a person.
+                When I'm not coding, you can find me outdoors, spending time with friends and family, or learning about something new. I'm always looking for new challenges and opportunities to grow as an engineer and as a person.
               </p>
 
               <p>
-                My two main motivators are: problem solving and system usability. The course I have most enjoyed at university is Cosc-262, Algorithms. I found learning about and understanding various software algorithms along with their applications challenging, but also very interesting. When using software I am impatient. This means that I have a great appreciation for user-friendly, well-written software - which is reflected in the code I write.
+                I am motivated by complex challenges that push me to work hard, learn and think critically. I am particularly interested in working in a modern environment that embraces change and new ideas,  while providing opportunities for me to grow in both technical and professional areas of my career and as a person. I am passionate about working with the latest technologies and applying my skills to solve real-world problems and create innovative solutions. I am excited to see what the future holds for me and the tech industry in the AI age!
               </p>
               
               <p>
-                I'm currently seeking internship opportunities where I can apply my skills and learn from experienced professionals. Feel free to reach out if you think we could work together!
+                I'm currently seeking graduate opportunities where I can apply my skills and learn from experienced professionals. Feel free to reach out if you think we could work together!
               </p>
             </div>
           </div>
@@ -193,39 +200,6 @@ const experiences = [
       </div>
     </section>
   )}
-  
-  <!-- Contact Section -->
-  <section class="py-12">
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-neutral-900 dark:text-white">
-          Let's Connect
-        </h2>
-        
-        <p class="text-neutral-700 dark:text-neutral-300 mb-8 max-w-2xl mx-auto">
-          I'm always open to new opportunities and collaborations. Feel free to reach out via email or connect with me on social media.
-        </p>
-        
-        <div class="flex justify-center space-x-4">
-          <a 
-            href="mailto:samuel.ry.beattie@gmail.com" 
-            class="px-6 py-3 rounded-lg bg-primary-600 hover:bg-primary-700 text-white font-medium transition-colors"
-          >
-            Email Me
-          </a>
-          
-          <a 
-            href="https://linkedin.com/in/sam-bt" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            class="px-6 py-3 rounded-lg bg-neutral-200 dark:bg-neutral-700 hover:bg-neutral-300 dark:hover:bg-neutral-600 text-neutral-900 dark:text-white font-medium transition-colors"
-          >
-            LinkedIn
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
 </Layout>
 
 <style>

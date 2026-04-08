@@ -25,6 +25,8 @@ export interface Project {
       
       RenoReel is a task management and documentation tool designed specifically for home renovation projects. It provides a structured platform for homeowners, contractors, and DIY enthusiasts to plan, track, and share their renovation journeys in a visually engaging way.
       
+      This app is mostly written in Java using the SpringBoot framework, with a JavaScript, HTML and CSS frontend. It is built using a CI/CD pipeline, with comprehensive unit, integration and end-to-end tests, along with a comprehensive manual testing and documentation system. It was developed by a team of 6 students over the course of a year, following the Scrum framework in a supervised university setting. I  contributed cross-functionally to all aspects of the project including backend and frontend development, testing, documentation and project management.  
+      
       In today's interconnected world, sharing life's transformations has become second nature.  However, home renovations deserve more than a simple before and after photo. RenoReel creates a dedicated space where homeowners, DIY enthusiasts, and renovation professionals can document their projects from conception to completion, breaking down complex transformations into manageable tasks and shareable moments.
       
       `,
@@ -40,7 +42,7 @@ export interface Project {
         "Following real software development lifecycle and best practices",
         "Learning how use various frameworks together to develop a continuously-integrated full-stack application", 
       ],
-      learnings: [ /* … */ ],
+      learnings: [],
     },
     'global-idv': {
       title: "Global Identity Verification iOS App",
